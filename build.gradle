@@ -54,11 +54,5 @@ buildscript {
     }
 }
 
-apply plugin: 'org.owasp.dependencycheck'
-check.dependsOn dependencyCheckAnalyze
+apply plugin: 'org.owasp.dependencycheck.gradle.DependencyCheck'
 
-dependencyCheck {
-    autoUpdate=false
-    cveValidForHours=12
-    format='ALL'
-}
