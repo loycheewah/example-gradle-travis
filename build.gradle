@@ -23,13 +23,8 @@ configurations.all {
 
 //Most of these are here for the security results, not because they are actually used
 dependencies {
-	compile group: 'org.apache.tomcat', name: 'tomcat-jasper', version: '4.1.0'
 	compile group: 'org.apache.activemq', name: 'apache-activemq', version: '5.0.0'
 	compile group: 'org.springframework', name: 'spring-webmvc', version: '5.0.0.RELEASE'
-	compile group: 'org.jenkins-ci.main', name: 'jenkins-core', version: '2.34'
-	compile group: 'org.yaxim', name: 'bruno', version: '0.8.6'
-	compile group: 'com.itextpdf', name: 'itext7-core', version: '7.0.0'
-	compile group: 'org.jabref', name: 'jabrefmain', version: '4.3.1'
 	compile group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
 	compile group: 'args4j', name: 'args4j', version: '2.33'
 	compile group: 'javax.inject', name: 'javax.inject', version: '1'
