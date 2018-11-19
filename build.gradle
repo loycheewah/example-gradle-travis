@@ -57,3 +57,14 @@ buildscript {
 }
 
 apply plugin: "net.ossindex.audit"
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.owasp:dependency-check-gradle:3.3.4'
+    }
+}
+
+
