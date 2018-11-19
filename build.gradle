@@ -23,6 +23,8 @@ configurations.all {
 
 //Most of these are here for the security results, not because they are actually used
 dependencies {
+	classpath 'org.owasp:dependency-check-gradle:3.3.4'
+	
 	compile group: 'org.apache.activemq', name: 'apache-activemq', version: '5.0.0'
 	compile group: 'org.springframework', name: 'spring-webmvc', version: '5.0.0.RELEASE'
 	compile group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
@@ -43,15 +45,6 @@ dependencies {
 
 task wrapper(type: Wrapper) {
     gradleVersion = '3.2'
-}
-
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'org.owasp:dependency-check-gradle:3.3.4'
-    }
 }
 
 apply plugin: 'org.owasp.dependencycheck'
