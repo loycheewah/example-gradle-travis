@@ -67,4 +67,4 @@ buildscript {
     }
 }
 
-
+apply plugin: "org.owasp.dependencycheck"
