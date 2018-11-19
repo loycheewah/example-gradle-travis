@@ -59,12 +59,20 @@ buildscript {
 apply plugin: "net.ossindex.audit"
 
 buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'org.owasp:dependency-check-gradle:3.3.4'
-    }
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath "gradle.plugin.org.owasp:dependency-check-gradle:1.4.3"
+  }
 }
 
 apply plugin: "org.owasp.dependencycheck"
+
+dependencyCheck {
+    autoUpdate=false
+    data {
+        directory='./dependency-check-data'
+        connectionString='jdbc:h2:file:%s;FILE_LOCK=FS;AUTOCOMMIT=ON;'
+    }
+}
