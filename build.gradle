@@ -56,3 +56,11 @@ buildscript {
 
 apply plugin: 'org.owasp.dependencycheck.gradle.DependencyCheck'
 
+afterEvaluate {
+    try {
+        check.dependsOn 'dependencyCheck'
+    } catch (Exception ex) {
+        System.out.println(project.name + ": " + ex.getMessage())
+    }
+}
+
