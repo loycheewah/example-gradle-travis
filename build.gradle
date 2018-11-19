@@ -44,3 +44,14 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = '3.2'
 }
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.owasp:dependency-check-gradle:3.3.4'
+    }
+}
+
+apply plugin: 'org.owasp.dependencycheck'
